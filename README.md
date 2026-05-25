@@ -145,11 +145,14 @@ If you hit issues with the pack behavior or need to understand how a similar fea
 
 #### Known issues (26.1)
 
-- **Creative mode previews don't update.** When a shulker box is taken from the
-  creative inventory (or duplicated there), the generated tooltip can be stale
-  or missing. The data pack regenerates previews as items move through normal
-  inventories; creative-created/duplicated items appear not to re-trigger that
-  pass. Under investigation.
+- **Creative mode previews (fixed).** Box detection is driven by the
+  `inventory_changed` advancement, which never fires for creative inventory
+  edits: the creative-slot packet pre-syncs the menu's remote slot before
+  `broadcastChanges()`, so the slot listener sees no diff and the trigger is
+  skipped. Boxes obtained via the creative menu, pick-block, or stack
+  duplication were therefore never scanned. Worked around in `meta/tick` with a
+  throttled rescan of creative-mode players (a no-op when all their boxes are
+  already processed).
 - **Pot / banner / shield pattern overlays are not rendered.** The block image
   dumper does not yet produce the per-face sherd/banner/shield images
   (`block images/pot/`, `banner/`, `shield/`). `script.py` degrades these
