@@ -1,0 +1,8 @@
+{
+   "pack": {
+      "pack_format": 84,
+      "min_format": [84, 0],
+      "max_format": [84, 0],
+      "description": "(apply this pack above the normal resource pack)"
+   }
+}

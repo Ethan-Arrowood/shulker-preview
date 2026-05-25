@@ -1,0 +1,10 @@
+{
+   "values": [
+      "#tryashtar.shulker_preview:special_render/overrides",
+      "#tryashtar.shulker_preview:special_render/grass_colored",
+      "#minecraft:cauldron_can_remove_dye",
+      "#tryashtar.shulker_preview:special_render/potion",
+      "firework_star",
+      "filled_map"
+   ]
+}

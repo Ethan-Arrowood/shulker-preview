@@ -2,6 +2,7 @@
 
 |Version|Download|
 |---|---|
+|Minecraft 26.1|• [Data Pack](26.1/Shulker%20Preview%20Data%20Pack%20(26.1).zip?raw=1)<br>• [Resource Pack](26.1/Shulker%20Preview%20Resource%20Pack%20(26.1).zip?raw=1)|
 |Minecraft 1.21.6|• [Data Pack](1.21/Shulker%20Preview%20Data%20Pack%20(1.21.6).zip?raw=1)<br>• [Resource Pack](1.21/Shulker%20Preview%20Resource%20Pack%20(1.21.6).zip?raw=1)|
 |Minecraft 1.20.5|• [Data Pack](1.20/Shulker%20Preview%20Data%20Pack%20(1.20.5).zip?raw=1)<br>• [Resource Pack](1.20/Shulker%20Preview%20Resource%20Pack%20(1.20.5).zip?raw=1)|
 |Minecraft 1.19|• [Data Pack](1.19/Shulker%20Preview%20Data%20Pack%20(1.19).zip?raw=1)<br>• [Resource Pack](1.19/Shulker%20Preview%20Resource%20Pack%20(1.19).zip?raw=1)|
@@ -70,6 +71,10 @@
 
 ### Changelog
 ```diff
+Current 26.1 version
++ All 26.1 items (copper tools/armor, spears, nautilus armor, shelves, copper golem statues, etc.)
++ Updated pack formats: data pack 101.1, resource pack 84.0
+
 Current 1.21 version
 + All 1.21 items
 + Bee nests/hives show honey when full
@@ -129,3 +134,11 @@ Video release
 
 Initial release (reddit)
 ```
+
+---
+
+### Development
+
+This project targets vanilla data packs and resource packs only — no mods required to use. A mod may occasionally be needed as a development tool (e.g. the block image dumper in `tools/`), but the outputs are always pack files.
+
+If you hit issues with the pack behavior or need to understand how a similar feature is implemented, the [ShulkerBoxTooltip](https://github.com/MisterPeModder/ShulkerBoxTooltip) Fabric mod is a good reference — it solves the same problem as a mod and the source may clarify edge cases.
