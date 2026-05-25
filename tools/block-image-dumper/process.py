@@ -48,7 +48,24 @@ def main():
     for png in pngs:
         shutil.copy2(png, dest / png.name)
 
-    print(f'Copied {len(pngs)} images  {src}  →  {dest}')
+    total = len(pngs)
+
+    # Decoration overlays (F8 dump) live in subdirectories that script.py reads
+    # as ../block images/{pot,banner,shield}/...  Copy each across if present.
+    for sub in ('pot', 'banner', 'shield'):
+        sub_src = src / sub
+        if not sub_src.is_dir():
+            continue
+        sub_pngs = sorted(sub_src.glob('*.png'))
+        if not sub_pngs:
+            continue
+        (dest / sub).mkdir(exist_ok=True)
+        for png in sub_pngs:
+            shutil.copy2(png, dest / sub / png.name)
+        total += len(sub_pngs)
+        print(f'  + {len(sub_pngs)} {sub} overlays')
+
+    print(f'Copied {total} images  {src}  →  {dest}')
     print()
     print('Next: re-run script.py in 26.1/ to regenerate the resource packs with block renders.')
     print('  cd ../../26.1 && python3 script.py')

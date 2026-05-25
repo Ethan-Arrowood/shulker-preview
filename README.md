@@ -161,9 +161,11 @@ If you hit issues with the pack behavior or need to understand how a similar fea
   - *Remaining edge case:* creative **pick-block** on a placed box produces the
     item directly in the hotbar with no drop, so it bypasses this path; such a
     box can still show a stale preview until it is next dropped.
-- **Pot / banner / shield pattern overlays are not rendered.** The block image
-  dumper does not yet produce the per-face sherd/banner/shield images
-  (`block images/pot/`, `banner/`, `shield/`). `script.py` degrades these
-  gracefully — the base item renders with no pattern overlay rather than
-  corrupting the tooltip — but the decorative detail is absent until the dumper
-  is extended to capture those faces.
+- **Pot / banner / shield pattern overlays (implemented).** The block image
+  dumper's F8 "decoration dump" produces the per-face overlay images
+  (`block images/pot/`, `banner/`, `shield/`) by rendering two icons side by
+  side and diffing them: pots compare a plain pot against one sherd face to
+  isolate the motif; banners/shields render the pattern in white dye over a
+  black base so the brightness difference becomes a tintable white mask. If the
+  images are absent, `script.py` still degrades gracefully (base item, no
+  overlay) rather than corrupting the tooltip.
