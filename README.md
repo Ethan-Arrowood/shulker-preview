@@ -145,14 +145,22 @@ If you hit issues with the pack behavior or need to understand how a similar fea
 
 #### Known issues (26.1)
 
-- **Creative mode previews (fixed).** Box detection is driven by the
-  `inventory_changed` advancement, which never fires for creative inventory
-  edits: the creative-slot packet pre-syncs the menu's remote slot before
-  `broadcastChanges()`, so the slot listener sees no diff and the trigger is
-  skipped. Boxes obtained via the creative menu, pick-block, or stack
-  duplication were therefore never scanned. Worked around in `meta/tick` with a
-  throttled rescan of creative-mode players (a no-op when all their boxes are
-  already processed).
+- **Creative mode previews going stale (fixed).** Editing a box's contents
+  normally produces a fresh item without the `processed` custom_data flag, so it
+  gets re-scanned. But breaking a shulker box in creative goes through
+  `ShulkerBoxBlock.playerWillDestroy`, which applies the block entity's full
+  `collectComponents()` to the drop instead of the loot table's restricted copy
+  list — so the stale `processed` flag and old lore survive a place→break edit,
+  and the box is never re-detected (showing the old preview). Survival is
+  unaffected because its drop uses the loot table (copies only
+  `custom_name`/`container`/`lock`/`container_loot`). Fixed in
+  `shulker_box/check_dropped`: dropped boxes are now reprocessed regardless of
+  the flag. A dropped item is a ground entity (10-tick pickup delay), so the
+  refresh is flicker-free, and the lore modifiers `replace_all` so reprocessing
+  can't duplicate lines.
+  - *Remaining edge case:* creative **pick-block** on a placed box produces the
+    item directly in the hotbar with no drop, so it bypasses this path; such a
+    box can still show a stale preview until it is next dropped.
 - **Pot / banner / shield pattern overlays are not rendered.** The block image
   dumper does not yet produce the per-face sherd/banner/shield images
   (`block images/pot/`, `banner/`, `shield/`). `script.py` degrades these
