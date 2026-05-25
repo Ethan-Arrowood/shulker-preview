@@ -142,3 +142,17 @@ Initial release (reddit)
 This project targets vanilla data packs and resource packs only — no mods required to use. A mod may occasionally be needed as a development tool (e.g. the block image dumper in `tools/`), but the outputs are always pack files.
 
 If you hit issues with the pack behavior or need to understand how a similar feature is implemented, the [ShulkerBoxTooltip](https://github.com/MisterPeModder/ShulkerBoxTooltip) Fabric mod is a good reference — it solves the same problem as a mod and the source may clarify edge cases.
+
+#### Known issues (26.1)
+
+- **Creative mode previews don't update.** When a shulker box is taken from the
+  creative inventory (or duplicated there), the generated tooltip can be stale
+  or missing. The data pack regenerates previews as items move through normal
+  inventories; creative-created/duplicated items appear not to re-trigger that
+  pass. Under investigation.
+- **Pot / banner / shield pattern overlays are not rendered.** The block image
+  dumper does not yet produce the per-face sherd/banner/shield images
+  (`block images/pot/`, `banner/`, `shield/`). `script.py` degrades these
+  gracefully — the base item renders with no pattern overlay rather than
+  corrupting the tooltip — but the decorative detail is absent until the dumper
+  is extended to capture those faces.

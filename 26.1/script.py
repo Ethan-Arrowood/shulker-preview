@@ -180,7 +180,13 @@ def main():
             add_overlay_translations('banner', with_namespace(pattern), [chars1], lang, banner_overlay, '')
             add_overlay_translations('shield', with_namespace(pattern), [chars2], lang, banner_overlay, '')
          else:
-            print(f'WARNING: banner pattern {pattern} not handled!')
+            # No dumped banner/shield faces. Emit EMPTY overlay translations so
+            # patterned banners/shields (and the shield base color, which uses
+            # the 'base' pattern key) degrade to the plain item instead of
+            # leaking raw translation keys into the tooltip.
+            add_overlay_translations('banner', with_namespace(pattern), [{'rows':['', '', '']}], lang, '', '')
+            add_overlay_translations('shield', with_namespace(pattern), [{'rows':['', '', '']}], lang, '', '')
+            print(f'WARNING: banner pattern {pattern} not handled (degraded to base item)')
       for pattern in pot_list:
          if pattern == 'blank':
             continue
@@ -195,7 +201,14 @@ def main():
             add_overlay_translations('pot', with_namespace(item_name) + '.left', [chars1], lang, banner_overlay, '')
             add_overlay_translations('pot', with_namespace(item_name) + '.right', [chars2], lang, banner_overlay, '')
          else:
-            print(f'WARNING: pot pattern {pattern} not handled!')
+            # No dumped sherd faces for this pattern. Emit EMPTY overlay
+            # translations (same as the blank-brick faces) so the render macro's
+            # key lookup resolves to nothing. Without these keys the macro leaks
+            # the raw translation string into the tooltip, corrupting the
+            # negative-space layout. Net-zero advance => base pot renders cleanly.
+            add_overlay_translations('pot', with_namespace(item_name) + '.left', [{'rows':['', '', '']}], lang, '', '')
+            add_overlay_translations('pot', with_namespace(item_name) + '.right', [{'rows':['', '', '']}], lang, '', '')
+            print(f'WARNING: pot pattern {pattern} not handled (degraded to base item)')
       add_overlay_translations('pot', 'minecraft:brick.left', [{'rows':['', '', '']}], lang, '', '')
       add_overlay_translations('pot', 'minecraft:brick.right', [{'rows':['', '', '']}], lang, '', '')
       got_pats = False
