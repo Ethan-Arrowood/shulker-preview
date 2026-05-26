@@ -1,3 +1,8 @@
 cache/
 block images/
 .DS_Store
+
+# Stray build output (the dumper mod now lives in its own repo; only process.py
+# remains here, but guard against accidental local builds under tools/).
+build/
+.gradle/

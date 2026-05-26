@@ -139,7 +139,7 @@ Initial release (reddit)
 
 ### Development
 
-This project targets vanilla data packs and resource packs only — no mods required to use. A mod may occasionally be needed as a development tool (e.g. the block image dumper in `tools/`), but the outputs are always pack files.
+This project targets vanilla data packs and resource packs only — no mods required to use. A mod may occasionally be needed as a development tool (e.g. the [block image dumper](https://github.com/Ethan-Arrowood/block-image-dumper), whose repo-side integration lives in `tools/`), but the outputs are always pack files.
 
 If you hit issues with the pack behavior or need to understand how a similar feature is implemented, the [ShulkerBoxTooltip](https://github.com/MisterPeModder/ShulkerBoxTooltip) Fabric mod is a good reference — it solves the same problem as a mod and the source may clarify edge cases.
 
