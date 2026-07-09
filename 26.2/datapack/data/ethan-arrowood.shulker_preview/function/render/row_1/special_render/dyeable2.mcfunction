@@ -1,0 +1,5 @@
+# dyeable items render with a base layer and a colored layer
+# wolf armor uniquely doesn't render its top layer when not dyed
+$execute if score #has_color shulker_preview matches 1 if items entity @s contents wolf_armor run data modify storage ethan-arrowood.shulker_preview:data tooltip append value [{translate:"ethan-arrowood.shulker_preview.layer.$(id).0.1"},{translate:"ethan-arrowood.shulker_preview.layer.minecraft:wolf_armor.1.1",color:"#$(red)$(green)$(blue)"}]
+execute if score #has_color shulker_preview matches 0 if items entity @s contents wolf_armor run data modify storage ethan-arrowood.shulker_preview:data tooltip append value {translate:"ethan-arrowood.shulker_preview.item.minecraft:wolf_armor.1"}
+$execute unless items entity @s contents wolf_armor run data modify storage ethan-arrowood.shulker_preview:data tooltip append value [{translate:"ethan-arrowood.shulker_preview.layer.$(id).0.1",color:"#$(red)$(green)$(blue)"},{translate:"ethan-arrowood.shulker_preview.layer.$(id).1.1",color:"white"}]

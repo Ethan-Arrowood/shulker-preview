@@ -32,7 +32,7 @@ def main():
     src = mc_dir / 'block-images'
     if not src.is_dir():
         print(f'ERROR: {src} does not exist.')
-        print('Make sure you pressed F7 in a loaded Minecraft 26.1 world with the mod installed.')
+        print('Make sure you pressed F7 in a loaded Minecraft world with the mod installed.')
         sys.exit(1)
 
     script_dir = Path(__file__).resolve().parent
@@ -67,8 +67,8 @@ def main():
 
     print(f'Copied {total} images  {src}  →  {dest}')
     print()
-    print('Next: re-run script.py in 26.1/ to regenerate the resource packs with block renders.')
-    print('  cd ../../26.1 && python3 script.py')
+    print('Next: re-run script.py in the current pack version folder to regenerate the packs.')
+    print('  cd ../../<version> && python3 script.py    # e.g. cd ../../26.2')
 
 
 if __name__ == '__main__':

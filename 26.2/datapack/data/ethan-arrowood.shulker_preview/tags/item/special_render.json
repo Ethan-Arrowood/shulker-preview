@@ -1,0 +1,10 @@
+{
+   "values": [
+      "#ethan-arrowood.shulker_preview:special_render/overrides",
+      "#ethan-arrowood.shulker_preview:special_render/grass_colored",
+      "#minecraft:cauldron_can_remove_dye",
+      "#ethan-arrowood.shulker_preview:special_render/potion",
+      "firework_star",
+      "filled_map"
+   ]
+}

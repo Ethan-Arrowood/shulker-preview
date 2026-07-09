@@ -6,3 +6,6 @@ block images/
 # remains here, but guard against accidental local builds under tools/).
 build/
 .gradle/
+
+# Local python env for script.py (see requirements.txt)
+.venv/
