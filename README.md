@@ -1,17 +1,15 @@
+# Shulker Preview
+
+A vanilla **data pack + resource pack** that shows a live preview of a shulker box's contents directly in its tooltip — item icons, stack counts, durability bars, banner patterns, armor trims, and more, rendered with a custom font trick. No mods required, works in singleplayer and on vanilla servers. Ender chest previews are included and can be toggled.
+
 ### Downloads
 
 |Version|Download|
 |---|---|
-|Minecraft 26.2|• [Data Pack](26.2/Shulker%20Preview%20Data%20Pack%20(26.2).zip?raw=1)<br>• [Resource Pack](26.2/Shulker%20Preview%20Resource%20Pack%20(26.2).zip?raw=1)|
+|Minecraft 26.2|• [Data Pack](26.2/Shulker%20Preview%20Data%20Pack%20(26.2).zip?raw=1)<br>• [Resource Pack](26.2/Shulker%20Preview%20Resource%20Pack%20(26.2).zip?raw=1)<br>• [Dark Theme](26.2/Shulker%20Preview%20Dark%20Theme%20(26.2).zip?raw=1) (optional, on top of the resource pack)|
 |Minecraft 26.1|• [Data Pack](26.1/Shulker%20Preview%20Data%20Pack%20(26.1).zip?raw=1)<br>• [Resource Pack](26.1/Shulker%20Preview%20Resource%20Pack%20(26.1).zip?raw=1)|
-|Minecraft 1.21.6|• [Data Pack](1.21/Shulker%20Preview%20Data%20Pack%20(1.21.6).zip?raw=1)<br>• [Resource Pack](1.21/Shulker%20Preview%20Resource%20Pack%20(1.21.6).zip?raw=1)|
-|Minecraft 1.20.5|• [Data Pack](1.20/Shulker%20Preview%20Data%20Pack%20(1.20.5).zip?raw=1)<br>• [Resource Pack](1.20/Shulker%20Preview%20Resource%20Pack%20(1.20.5).zip?raw=1)|
-|Minecraft 1.19|• [Data Pack](1.19/Shulker%20Preview%20Data%20Pack%20(1.19).zip?raw=1)<br>• [Resource Pack](1.19/Shulker%20Preview%20Resource%20Pack%20(1.19).zip?raw=1)|
-|Minecraft 1.18|• [Data Pack](1.18/Shulker%20Preview%20Data%20Pack%20(1.18).zip?raw=1)<br>• [Resource Pack](1.18/Shulker%20Preview%20Resource%20Pack%20(1.18).zip?raw=1)|
-|Minecraft 1.17|• [Data Pack](1.17/Shulker%20Preview%20Data%20Pack%20(1.17).zip?raw=1)<br>• [Resource Pack](1.17/Shulker%20Preview%20Resource%20Pack%20(1.17).zip?raw=1)|
-|Minecraft 1.16|• [Data Pack](1.16/Shulker%20Preview%20Data%20Pack%20(1.16).zip?raw=1)<br>• [Resource Pack](1.16/Shulker%20Preview%20Resource%20Pack%20(1.16).zip?raw=1)|
-|Minecraft 1.15|• [Data Pack](1.15/Shulker%20Preview%20Data%20Pack%20(1.15).zip?raw=1)<br>• [Resource Pack](1.15/Shulker%20Preview%20Resource%20Pack%20(1.15).zip?raw=1)|
-|Minecraft 1.14.3|• [Data Pack](1.14/Shulker%20Preview%20Data%20Pack%20(1.14).zip?raw=1)<br>• [Resource Pack](1.14/Shulker%20Preview%20Resource%20Pack%20(1.14).zip?raw=1)|
+
+Only the newest release is actively supported. Packs for Minecraft 1.14–1.21 were released by [tryashtar's original project](https://github.com/tryashtar/shulker-preview) and can be downloaded there; they are not supported here.
 
 ---
 
@@ -51,21 +49,19 @@
 ---
 
 ### FAQ
+* How do I change settings (ender chest previews, colored tooltips)?
+   * Run `/function ethan-arrowood.shulker_preview:config/show_settings` and toggle the options in the dialog.
+   * On 26.1 the namespace is `tryashtar.shulker_preview` instead.
 * Does this work with Bukkit/Spigot/Paper?
-   * No guarantees. I have experienced countless issues with these modded servers breaking vanilla behavior that this pack requires.
-* Does this work with Optifine?
-   * Yes.
+   * No guarantees. These modded servers can break vanilla behavior that this pack requires.
 * Does this work with other resource packs?
-   * Items in the preview will look as they do in your personal resource pack, but blocks will appear with vanilla textures.
+   * Yes — put Shulker Preview above them. Items in the preview will look as they do in your personal resource pack, but blocks will appear with vanilla textures.
 * What happens if players don't have the resource pack?
    * They will see the vanilla shulker box tooltip, though it may contain a few extra lines.
-* How do I enable/disable ender chest previews?
-   * On 26.2 or later, run `/function ethan-arrowood.shulker_preview:config/show_settings` and click the buttons to toggle this feature.
-   * On 26.1 and older versions, the namespace is `tryashtar.shulker_preview` instead.
 * How do I completely uninstall the pack?
    * After disabling or removing the pack, the following artifacts will remain and must be cleared manually:
       * The `shulker_preview` scoreboard objective. This can be removed with `/scoreboard objectives remove shulker_preview`.
-      * The temporary values saved to NBT storage. This can be removed by deleting the `command_storage_ethan-arrowood.shulker_preview.dat` file from your world's `data` folder (`command_storage_tryashtar.shulker_preview.dat` for 26.1 and older).
+      * The temporary values saved to NBT storage. This can be removed by deleting the `command_storage_ethan-arrowood.shulker_preview.dat` file from your world's `data` folder (`command_storage_tryashtar.shulker_preview.dat` on 26.1).
       * Any existing shulker boxes will still show the preview in the tooltip. To remove it, simply place and break the shulker box after the pack has been disabled.
 * It's not working for me!
    * First, please [follow these instructions](https://imgur.com/a/rBukto5) to diagnose and solve some very common issues.
@@ -73,9 +69,12 @@
 
 ### Credits
 
-This is a fork of [tryashtar's Shulker Preview](https://github.com/tryashtar/shulker-preview), who designed and built the original pack (and its remarkable font-rendering trick) for Minecraft 1.14 through 1.21. Those versions in the table above are their original releases, unchanged. Everything from 26.1 onward is maintained and published by [Ethan Arrowood](https://github.com/Ethan-Arrowood) — the 26.1 update still shipped under the original `tryashtar.shulker_preview` namespace, and 26.2+ uses `ethan-arrowood.shulker_preview`.
+This is a fork of [tryashtar's Shulker Preview](https://github.com/tryashtar/shulker-preview), who designed and built the original pack (and its remarkable font-rendering trick) for Minecraft 1.14 through 1.21 — those releases live in their repository, and in this fork's git history. Everything from 26.1 onward is maintained and published by [Ethan Arrowood](https://github.com/Ethan-Arrowood) — the 26.1 update still shipped under the original `tryashtar.shulker_preview` namespace, and 26.2+ uses `ethan-arrowood.shulker_preview`.
 
 ### Changelog
+
+For the 1.14–1.21 history, see the [original project](https://github.com/tryashtar/shulker-preview).
+
 ```diff
 Current 26.2 version
 + All 26.2 items (cinnabar and sulfur block families, sulfur cube, new music disc)
@@ -86,65 +85,6 @@ Current 26.2 version
 Current 26.1 version
 + All 26.1 items (copper tools/armor, spears, nautilus armor, shelves, copper golem statues, etc.)
 + Updated pack formats: data pack 101.1, resource pack 84.0
-
-Current 1.21 version
-+ All 1.21 items
-+ Bee nests/hives show honey when full
-+ Settings menu now uses custom dialog instead of chat
-
-Current 1.20 version
-+ All 1.20 items
-+ Use "fallback" feature instead of old translation-detection trick
-+ Fixed artifacts in some mangrove block textures
-+ Armor trims show on trimmed items
-+ Decorated pots show their patterns
-+ All colorable items show exact colors
-+ Bundles show their fill percentage
-+ Option for colored tooltips
-+ Ender chest previews are now enabled by default
-+ Use storage instead of entities to construct tooltip
-+ Use macros instead of function trees to generate translations
-+ Tooltip and number textures come from your resource pack
-
-Current 1.19 version
-+ All 1.19 items
-
-Current 1.18 version
-+ All 1.18 items (all one of them)
-
-Current 1.17 version
-+ All 1.17 items
-+ Unknown items show a missing texture instead of messing up the order
-+ No longer requires forceloaded chunk
-
-Current 1.16 version
-+ All 1.16 items
-+ Now uses custom font, preventing potential private use conflicts
-+ Item textures use the player's current resource pack
-+ Banners and shields show their pattern
-+ Custom colored armor, potions, etc. show approximate colors
-+ When ender chest previews are enabled, ender chests showing the same preview can stack
-+ New settings menu for toggling previews for shulker boxes and ender chests
-
-Current 1.15 version
-+ All 1.15 items
-+ When Bukkit server is detected, switches to slower but fewer-character lore generation method
-+ Detects when Bukkit mangles lore, and adds text to the tooltip notifying you
-
-Current 1.14 version
-+ All 1.14 items
-+ Option to preview ender chests
-+ Optifine compatibility
-+ No longer crashes on certain graphics cards
-+ Show custom item name in tooltip
-+ More accurate durability bars
-+ Data pack no longer requires clicking forceload text
-+ Default Minecraft tooltip appears for players without the pack
-
-Video release
-+ Dropped shulker box items are processed
-
-Initial release (reddit)
 ```
 
 ---
