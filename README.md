@@ -73,7 +73,7 @@
 
 ### Credits
 
-This is a fork of [tryashtar's Shulker Preview](https://github.com/tryashtar/shulker-preview), who designed and built the original pack (and its remarkable font-rendering trick) for Minecraft 1.14 through 26.1. Those versions in the table above are their original releases, unchanged. From 26.2 onward the pack is maintained and published by [Ethan Arrowood](https://github.com/Ethan-Arrowood) under the `ethan-arrowood.shulker_preview` namespace.
+This is a fork of [tryashtar's Shulker Preview](https://github.com/tryashtar/shulker-preview), who designed and built the original pack (and its remarkable font-rendering trick) for Minecraft 1.14 through 1.21. Those versions in the table above are their original releases, unchanged. Everything from 26.1 onward is maintained and published by [Ethan Arrowood](https://github.com/Ethan-Arrowood) — the 26.1 update still shipped under the original `tryashtar.shulker_preview` namespace, and 26.2+ uses `ethan-arrowood.shulker_preview`.
 
 ### Changelog
 ```diff
