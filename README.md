@@ -7,7 +7,7 @@ A vanilla **data pack + resource pack** that shows a live preview of a shulker b
 |Version|Download|
 |---|---|
 |Minecraft 26.2|• [Data Pack](26.2/Shulker%20Preview%20Data%20Pack%20(26.2).zip?raw=1)<br>• [Resource Pack](26.2/Shulker%20Preview%20Resource%20Pack%20(26.2).zip?raw=1)<br>• [Dark Theme](26.2/Shulker%20Preview%20Dark%20Theme%20(26.2).zip?raw=1) (optional, on top of the resource pack)|
-|Minecraft 26.1|• [Data Pack](26.1/Shulker%20Preview%20Data%20Pack%20(26.1).zip?raw=1)<br>• [Resource Pack](26.1/Shulker%20Preview%20Resource%20Pack%20(26.1).zip?raw=1)|
+|Minecraft 26.1|• [Data Pack](26.1/Shulker%20Preview%20Data%20Pack%20(26.1).zip?raw=1)<br>• [Resource Pack](26.1/Shulker%20Preview%20Resource%20Pack%20(26.1).zip?raw=1)<br>• [Dark Theme](26.1/Shulker%20Preview%20Dark%20Theme%20(26.1).zip?raw=1) (optional, on top of the resource pack)|
 
 Only the newest release is actively supported. Packs for Minecraft 1.14–1.21 were released by [tryashtar's original project](https://github.com/tryashtar/shulker-preview) and can be downloaded there; they are not supported here.
 
