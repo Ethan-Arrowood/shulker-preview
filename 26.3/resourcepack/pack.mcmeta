@@ -1,0 +1,11 @@
+{
+   "pack": {
+      "pack_format": 97,
+      "min_format": [97, 1],
+      "max_format": [97, 1],
+      "description": {
+         "text": "Shulker Box tooltip preview: resource pack",
+         "color": "#8fdff7"
+      }
+   }
+}

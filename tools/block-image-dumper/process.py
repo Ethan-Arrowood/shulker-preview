@@ -68,7 +68,7 @@ def main():
     print(f'Copied {total} images  {src}  →  {dest}')
     print()
     print('Next: re-run script.py in the current pack version folder to regenerate the packs.')
-    print('  cd ../../<version> && python3 script.py    # e.g. cd ../../26.2')
+    print('  cd ../../<version> && python3 script.py    # e.g. cd ../../26.3')
 
 
 if __name__ == '__main__':

@@ -1,0 +1,10 @@
+# copy the tooltip to any ender chest item that's in the player's hotbar
+execute if items entity @s hotbar.0 ender_chest run item modify entity @s hotbar.0 ethan-arrowood.shulker_preview:ender_chest_copy
+execute if items entity @s hotbar.1 ender_chest run item modify entity @s hotbar.1 ethan-arrowood.shulker_preview:ender_chest_copy
+execute if items entity @s hotbar.2 ender_chest run item modify entity @s hotbar.2 ethan-arrowood.shulker_preview:ender_chest_copy
+execute if items entity @s hotbar.3 ender_chest run item modify entity @s hotbar.3 ethan-arrowood.shulker_preview:ender_chest_copy
+execute if items entity @s hotbar.4 ender_chest run item modify entity @s hotbar.4 ethan-arrowood.shulker_preview:ender_chest_copy
+execute if items entity @s hotbar.5 ender_chest run item modify entity @s hotbar.5 ethan-arrowood.shulker_preview:ender_chest_copy
+execute if items entity @s hotbar.6 ender_chest run item modify entity @s hotbar.6 ethan-arrowood.shulker_preview:ender_chest_copy
+execute if items entity @s hotbar.7 ender_chest run item modify entity @s hotbar.7 ethan-arrowood.shulker_preview:ender_chest_copy
+execute if items entity @s hotbar.8 ender_chest run item modify entity @s hotbar.8 ethan-arrowood.shulker_preview:ender_chest_copy

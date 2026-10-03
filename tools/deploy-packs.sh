@@ -9,12 +9,12 @@
 #
 # Usage:
 #   ./deploy-packs.sh [version] [world]
-#     version  pack version folder to deploy from   (default: 26.2)
+#     version  pack version folder to deploy from   (default: 26.3)
 #     world    save folder for the data pack         (default: "Block Dump")
 #
 set -euo pipefail
 
-VERSION="${1:-26.2}"
+VERSION="${1:-26.3}"
 WORLD="${2:-Block Dump}"
 
 # Resolve the repo's <version>/ directory relative to this script.
